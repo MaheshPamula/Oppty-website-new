@@ -1,0 +1,665 @@
+:root {
+    --navy: #0F172A;
+    --indigo: #6366F1;
+    --emerald: #10B981;
+    --ghost-white: #F8FAFC;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--ghost-white);
+    padding-top: 100px; /* Space for fixed navbar */
+}
+
+/* Navbar Container */
+.navbar {
+    height: 90px;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    height: 55px; /* Adjust based on your logo aspect ratio */
+    display: block;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition);
+}
+
+.nav-links a i {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+/* Sliding Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--indigo);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--indigo);
+}
+
+/* Simplified Dropdown */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background: var(--white);
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    border-top: 3px solid var(--indigo);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    text-transform: none;
+}
+
+.dropdown-menu a::after { display: none; }
+
+/* Actions & Buttons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-solid {
+    background: var(--emerald);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 2px solid var(--emerald);
+    color: var(--emerald);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.phone-link {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phone-link i { color: var(--indigo); }
+
+/* Scroll State */
+.navbar.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.1);
+}
+
+
+
+
+
+/* Background: Pearl Mesh (Not Plain White) */
+.solutions-premium {
+    position: relative;
+    padding: 100px 5%;
+    background: #77e7afbe;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.pearl-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(204, 255, 0, 0.05) 0, transparent 50%);
+    filter: blur(40px);
+}
+
+.solutions-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Eye-Catchy Button Logic */
+.mega-button {
+    position: relative;
+    padding: 20px 45px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mega-button:hover {
+    transform: translateY(-5px);
+    background: #3b82f6; /* Changes to Blue on hover */
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+}
+
+.button-icon {
+    transition: transform 0.3s ease;
+}
+
+.mega-button:hover .button-icon {
+    transform: translateX(8px); /* Arrow slides out */
+}
+
+/* 3D Vertical Flip-Up Animation */
+.flip-up-box {
+    perspective: 2000px;
+    height: 500px;
+}
+
+.flip-up-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+/* Flip Upwards on Hover */
+.flip-up-box:hover .flip-up-inner {
+    transform: rotateX(-180deg);
+}
+
+.face-front, .face-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.face-front img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+.face-back {
+    background: #1a1a1a;
+    color: #fff;
+    transform: rotateX(-180deg); /* Pre-flipped */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #3b82f6;
+}
+
+/* Typography Gradient */
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+:root {
+    --navy-primary: #1a1a2e; /* Your Navbar Navy */
+    --white: #ffffff;
+}
+
+.polymath-solutions {
+    background-color: var(--white);
+    padding: 100px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.tech-header { text-align: center; margin-bottom: 80px; }
+.navy-title { color: var(--navy-primary); font-size: 3rem; font-weight: 900; letter-spacing: -1px; }
+.navy-title .thin { font-weight: 200; opacity: 0.7; }
+
+/* Polymath Cards */
+.poly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.poly-card {
+    background: var(--white);
+    border: 1px solid rgba(26, 26, 46, 0.1);
+    padding: 50px 35px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: crosshair;
+    transform-style: preserve-3d;
+}
+
+.poly-card h3 { color: var(--navy-primary); font-size: 1.4rem; margin: 20px 0 15px; position: relative; z-index: 5; }
+.poly-card p { color: #555; line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 5; }
+
+/* Poly-Morph Effect */
+.poly-morph {
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(26, 26, 46, 0.03) 0%, transparent 60%);
+    transition: 0.6s ease;
+    z-index: 1;
+}
+
+.poly-card:hover .poly-morph { transform: translate(10%, 10%); }
+.poly-card:hover { border-color: var(--navy-primary); box-shadow: 0 25px 50px rgba(26, 26, 46, 0.1); }
+
+/* Video Frame: Perfect Fit Cover */
+.video-showcase { display: flex; justify-content: center; }
+.video-frame {
+    width: 100%;
+    max-width: 950px;
+    aspect-ratio: 16/9;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+}
+
+.cover-vid { width: 100%; height: 100%; object-fit: cover; }
+.video-navy-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(26, 26, 46, 0.3), transparent);
+}
+
+
+
+
+:root {
+    --navy: #1a1a2e; /* Navbar Navy */
+}
+
+.arrow-showcase {
+    background-color: #ffffff; /* Pure White */
+    padding: 120px 0;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.reveal-box {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+    border-left: 2px solid rgba(26, 26, 46, 0.1);
+}
+
+/* THE MEGA ARROW: Left to Right Loop */
+.mega-arrow {
+    position: absolute;
+    top: -20px;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mega-arrow svg {
+    width: 250px; /* Large Arrow */
+    height: auto;
+    animation: arrowScan 6s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(26, 26, 46, 0.2));
+}
+
+@keyframes arrowScan {
+    0% { transform: translateX(-100px) scaleX(1); opacity: 0; }
+    10% { opacity: 1; }
+    50% { transform: translateX(1000px) scaleX(1.5); opacity: 1; }
+    51% { transform: translateX(1000px) scaleX(-1.5); } /* Flip for return */
+    90% { opacity: 1; }
+    100% { transform: translateX(-100px) scaleX(-1); opacity: 0; }
+}
+
+/* Matter/Text Styling */
+.arrow-content {
+    position: relative;
+    z-index: 2;
+}
+
+.navy-bold {
+    color: var(--navy);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.navy-thin {
+    color: var(--navy);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    opacity: 0.8;
+}
+
+/* Highlight effect when arrow passes */
+.arrow-content h2, .arrow-content p {
+    animation: textGlow 6s infinite ease-in-out;
+}
+
+@keyframes textGlow {
+    0%, 100% { color: var(--navy); }
+    50% { color: #3b82f6; text-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+}
+
+
+
+
+:root {
+    --navbar-navy: #1a1a2e; /* Use your exact navbar navy */
+    --footer-orange: #ff6b00; /* Headers matching your screenshot */
+}
+
+.main-footer {
+    background-color: var(--navbar-navy);
+    color: #ffffff;
+    padding: 80px 0 30px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 0.8fr;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 50px;
+}
+
+/* Headers matching original screenshot */
+.location-header {
+    color: var(--footer-orange);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.vision-statement, .address-detail, .contact-link, .quick-links-list a {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+}
+
+.quick-links-list { list-style: none; padding: 0; }
+.quick-links-list li { margin-bottom: 8px; }
+.extra-margin { margin-top: 35px; }
+
+/* Certification Logos - ZOOM IN/OUT Effect */
+.certification-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 60px 0;
+}
+
+.cert-box {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.cert-box img {
+    height: 75px; 
+    width: auto;
+    /* Remove white background by ensuring image is a transparent PNG */
+}
+
+.cert-box:hover {
+    transform: scale(1.2); /* Zoom In */
+}
+
+.copyright-bar {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 25px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* High-Clarity WhatsApp Sticky */
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-sticky img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-sticky:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+
+
+
+oppty-final-footer {
+  background-color: #1a1d23; /* Dark Slate color from your original screenshot */
+  padding: 50px 0 30px 0;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.f-content-wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative; /* Allows WhatsApp button to anchor here */
+}
+
+.f-main-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 0.8fr 0.6fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.f-logo-img {
+  width: 140px;
+  background: white; /* Matches the white box logo in your screenshot */
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.f-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #bdc3c7;
+  margin-bottom: 20px;
+}
+
+.f-title {
+  color: #ff7a00; /* Original Orange Heading Color */
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.f-info, .f-phone, .f-mail {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+
+.f-links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.f-links-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2.2;
+}
+
+.f-copy-desktop {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+/* WHATSAPP BUTTON POSITIONING - FIXED */
+.f-whatsapp-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 0px; /* Aligned with the bottom of the content as per screenshot */
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.f-whatsapp-btn img {
+  width: 32px;
+}
+
+.f-whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+  .f-main-grid { grid-template-columns: 1fr 1fr; }
+  .f-whatsapp-btn { position: fixed; bottom: 20px; z-index: 99; }
+}
+
+
+
+.tel-link {
+    text-decoration: none; 
+    color: inherit;     
+    display: flex;         
+    align-items: center;
+    gap: 8px;              
+}

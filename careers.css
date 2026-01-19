@@ -1,0 +1,359 @@
+:root {
+    --navy: #0F172A;
+    --indigo: #6366F1;
+    --emerald: #10B981;
+    --ghost-white: #F8FAFC;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--ghost-white);
+    padding-top: 100px; /* Space for fixed navbar */
+}
+
+/* Navbar Container */
+.navbar {
+    height: 90px;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    height: 55px; /* Adjust based on your logo aspect ratio */
+    display: block;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition);
+}
+
+.nav-links a i {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+/* Sliding Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--indigo);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--indigo);
+}
+
+/* Simplified Dropdown */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background: var(--white);
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    border-top: 3px solid var(--indigo);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    text-transform: none;
+}
+
+.dropdown-menu a::after { display: none; }
+
+/* Actions & Buttons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-solid {
+    background: var(--emerald);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 2px solid var(--emerald);
+    color: var(--emerald);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.phone-link {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phone-link i { color: var(--indigo); }
+
+/* Scroll State */
+.navbar.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.1);
+}
+
+
+
+
+/* Layout Basics */
+body { margin: 0; font-family: 'Inter', sans-serif; background: #000; color: white; }
+
+/* Section 1: Video First */
+.video-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+}
+
+.header-container { padding: 40px 0; z-index: 10; }
+.main-title { font-size: 3rem; text-transform: uppercase; font-weight: 900; }
+.highlight { color: #f39c12; }
+
+.video-wrapper {
+    width: 90%;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(243, 156, 18, 0.2);
+}
+
+.bg-video { width: 100%; height: 100%; object-fit: cover; }
+
+/* Section 2: Content Mixing with Background */
+.content-reveal {
+    padding: 100px 5%;
+    /* Gradient mixing colors: Deep Teal to Midnight Purple */
+    background: linear-gradient(180deg, #000000 0%, #0a192f 50%, #1a0b2e 100%);
+}
+
+.info-block {
+    background: rgba(255, 255, 255, 0.05); /* Glass effect */
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 50px;
+    border-left: 5px solid #f39c12; /* Accent from image */
+}
+
+.info-block p { font-size: 1.2rem; line-height: 1.8; color: #efefef; }
+
+/* Training Cards Mixing with Background */
+.cards-wrapper { display: flex; gap: 30px; justify-content: center; }
+
+.training-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    transition: 0.4s ease;
+}
+
+/* Visibility and Hover colors */
+.ds-card:hover { background: rgba(0, 128, 128, 0.2); border-color: #008080; }
+.ml-card:hover { background: rgba(142, 68, 173, 0.2); border-color: #8e44ad; }
+
+.num { font-size: 2.5rem; font-weight: 800; display: block; margin-bottom: 20px; }
+.enroll-btn {
+    width: 100%; padding: 12px; margin-top: 20px;
+    background: #f39c12; border: none; font-weight: bold; cursor: pointer;
+}
+
+
+
+
+
+:root {
+    --oppty-orange: #e67e22;
+    --oppty-blue: #2980b9;
+    --oppty-purple: #8e44ad;
+    --dark-bg: #0a0a0a;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header Animation */
+.career-header {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #111 0%, #000 100%);
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-out;
+}
+
+.highlight { color: var(--oppty-orange); }
+
+/* Video Showcase */
+.video-showcase {
+    padding: 0 5%;
+    background: #000;
+}
+
+.video-frame {
+    width: 100%;
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(230, 126, 34, 0.2);
+}
+
+.showcase-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Blending */
+.career-details {
+    padding: 100px 8%;
+    background: linear-gradient(180deg, #000 0%, #0a192f 30%, #1a0b2e 70%, #000 100%);
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 60px;
+    margin-bottom: 80px;
+    border-left: 6px solid var(--oppty-orange); /* Consistent Branding */
+}
+
+.perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.perk-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.perk-card:hover {
+    background: rgba(142, 68, 173, 0.15);
+    transform: translateY(-10px);
+    border-color: var(--oppty-purple);
+}
+
+.highlight-card {
+    border: 1px solid var(--oppty-orange);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll Reveal Trigger */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

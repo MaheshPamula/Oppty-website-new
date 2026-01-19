@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppty | IT Consulting & AI Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./academy.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"><img src="./images/oppty.png" alt="Oppty Logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About us .html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="./Our services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="./solutions.html">Solutions</a>
+                    </div>
+                </li>
+                <li><a href="./contact us.html">Contact Us</a></li>
+                <li><a href="./careers.html">Careers</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="./academy.html" class="btn btn-solid">Academy</a>
+                <a href="https://www.theprocareer.com/home" class="btn btn-outline">Training Partner</a>
+                  <div class="phone-link">
+              <a href="tel:+919491209900" class="tel-link">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 9491209900</span>
+    </a>
+</div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <section class="academy-hero">
+    <div class="video-container">
+        <video autoplay muted loop playsinline poster="fallback-image.jpg" class="bg-video">
+            <source src="./images/acdmy3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="dark-overlay"></div>
+    </div>
+
+    <div class="academy-content">
+        <span class="badge">Next-Gen Learning</span>
+        <h1 class="academy-heading">Empower Your Future with <span class="brand-text">Oppty Academy</span></h1>
+        <p class="academy-description">
+            Unlock industry-leading skills in AI, Cloud Computing, and Full-Stack Development. 
+            Bridge the gap between education and employment with our expert-led training modules.
+        </p>
+        <div class="button-group">
+            <button class="btn-primary">Explore Courses</button>
+            <button class="btn-secondary">Watch Preview</button>
+        </div>
+    </div>
+</section>
+
+
+<div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+<div class="second-heading">
+<h1 class="main-heading">Empower Your Future with Oppty Academy</h1>
+</div> 
+   
+
+    <div class="cards-container">
+        <div class="card">
+            <h3>🚀 Unlock Your Potential</h3>
+            <p>Unlock your potential with industry-ready AI, Data Science, and tech courses designed to propel your career forward. At Oppty Academy, we bridge the gap between aspiration and achievement through practical, project-based learning.</p>
+        </div>
+
+        <div class="card">
+            <h3>💼 Market-Aligned Training</h3>
+            <p>Our cutting-edge training programs are crafted to align with market demands, empowering individuals and teams with the skills to lead in AI, Data Science, and emerging technologies.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Hands-On Learning</h3>
+            <p>We focus on hands-on, industry-relevant learning that combines foundational knowledge with advanced applications. Our mentor-led, hybrid learning model ensures flexibility and personalized growth.</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, index * 200);
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+
+<section class="courses-section">
+    <div class="courses-header">
+        <h2>Our Courses</h2>
+        <p>Explore our dynamic courses tailored to make you job-ready in AI and Data Science.</p>
+    </div>
+
+    <div class="card-container">
+        <div class="info-card">
+            <div class="card-header">
+                <span class="card-number">01</span>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20style%3D%22enable-background%3Anew%200%200%20100%20100%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%09.wdt-cus-icon-text-fill-color%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-text-fill-color-gradient)%3Bstroke-width%3A0.9248%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3ClinearGradient%20id%3D%22wdt-cus-text-fill-color-gradient%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%22-0.5621%22%20y1%3D%2268.7109%22%20x2%3D%2269.2124%22%20y2%3D%2244.8075%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-icon-text-fill-color%22%20d%3D%22M50.8%2C1.7c3.9%2C0.9%2C7.9%2C0.8%2C11.5%2C2.1c15.3%2C5%2C28.4%2C16.6%2C33.9%2C31.4c6.6%2C19%2C1.1%2C39-14.3%2C51.7%20c-20.9%2C16.8-53.8%2C15.8-71.4-6.4C-3.7%2C61.4-2.7%2C34%2C18.2%2C19.2C32.5%2C8.7%2C51.1%2C7.6%2C66.5%2C16.1c13.2%2C8.4%2C21%2C22.1%2C19.8%2C38%20C85.3%2C71.9%2C71%2C84.7%2C53.4%2C88.9C34.7%2C92%2C18.2%2C81.4%2C10.6%2C65.7c-7.7-17.9%2C3.3-39%2C24.2-42.2c13.1-2.1%2C25.3%2C6.4%2C30.7%2C17.9%20C71%2C55%2C66.5%2C71.9%2C53.4%2C77.2c-6.6%2C3.1-14.3%2C3.1-21.8%2C0.4%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" class="rotating-svg" alt="icon">
+            </div>
+            <div class="card-content">
+                <h3>DATA SCIENCE</h3>
+                <p>Master data analytics and machine learning to build powerful decision-making</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="card-header">
+                <span class="card-number">02</span>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20style%3D%22enable-background%3Anew%200%200%20100%20100%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%09.wdt-cus-text-fill-color-04%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-test-fill-color-gradient-04-01)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3ClinearGradient%20id%3D%22wdt-cus-test-fill-color-gradient-04-01%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%22-0.7072%22%20y1%3D%2269.12%22%20x2%3D%2269.5168%22%20y2%3D%2245.3833%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-04%22%20d%3D%22M99%2C50c0%2C1.6-25.5%2C1.5-25.8%2C3c-0.2%2C1.6%2C24.5%2C8.1%2C24.2%2C9.6c-0.5%2C1.5-25.1-5.2-25.7-3.7%20c-0.6%2C1.5%2C21.6%2C14.2%2C20.8%2C15.6C91.7%2C75.9%2C69.6%2C63%2C68.7%2C64.3c-1.2%2C1.2%2C17.1%2C19.2%2C15.9%2C20.3c-1.2%2C1.2-19.2-17.1-20.4-16%20c-1.3%2C0.9%2C11.6%2C23.1%2C10.2%2C23.8C73%2C93.2%2C60.3%2C71%2C58.8%2C71.6c-1.4%2C0.6%2C5.2%2C25.3%2C3.7%2C25.7c-1.5%2C0.3-8-24.4-9.6-24.2%20C51.5%2C73.3%2C51.5%2C99%2C50%2C99c-1.6%2C0-1.5-25.5-3-25.8c-1.6-0.2-8.1%2C24.5-9.6%2C24.2c-1.5-0.5%2C5.2-25.1%2C3.7-25.7%20c-1.5-0.6-14.2%2C21.6-15.6%2C20.8C24.1%2C91.7%2C37%2C69.6%2C35.7%2C68.7c-1.3-0.9-19.3%2C17.2-20.4%2C16c-1.2-1.2%2C17.1-19.2%2C16-20.4%20C30.4%2C63%2C8.2%2C75.9%2C7.5%2C74.5c-0.8-1.4%2C21.4-14.2%2C20.8-15.6C27.7%2C57.5%2C3%2C64.2%2C2.6%2C62.7c-0.3-1.5%2C24.4-8%2C24.2-9.6%20C26.5%2C51.5%2C1%2C51.5%2C1%2C50c0-1.6%2C25.5-1.5%2C25.8-3c0.2-1.6-24.5-8.1-24.2-9.6c0.5-1.5%2C25.1%2C5.2%2C25.7%2C3.7c0.6-1.5-21.6-14.2-20.8-15.6%20C8.3%2C24.1%2C30.4%2C37%2C31.3%2C35.7c0.9-1.3-17.2-19.3-16-20.4c1.2-1.2%2C19.2%2C17.1%2C20.4%2C16C37%2C30.4%2C24.1%2C8.2%2C25.5%2C7.5%20c1.3-0.8%2C14%2C21.4%2C15.4%2C20.8S35.7%2C3%2C37.2%2C2.6c1.5-0.3%2C8%2C24.4%2C9.6%2C24.2c1.5-0.2%2C1.5-25.8%2C3-25.8c1.6%2C0%2C1.5%2C25.5%2C3%2C25.8%20C54.5%2C27%2C61%2C2.3%2C62.5%2C2.6c1.5%2C0.5-5.2%2C25.1-3.7%2C25.7C60.3%2C28.9%2C73%2C6.7%2C74.4%2C7.5c1.4%2C0.8-11.5%2C22.9-10.2%2C23.8%20c1.3%2C0.9%2C19.3-17.2%2C20.4-16c1.2%2C1.2-17.1%2C19.2-16%2C20.4c0.9%2C1.3%2C23.1-11.6%2C23.8-10.2c0.8%2C1.4-21.4%2C14-20.8%2C15.6%20c0.6%2C1.4%2C25.3-5.2%2C25.7-3.7c0.3%2C1.5-24.4%2C8-24.2%2C9.6C73.3%2C48.5%2C99%2C48.4%2C99%2C50z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" class="rotating-svg" alt="icon">
+            </div>
+            <div class="card-content">
+                <h3>MACHINE LEARNING</h3>
+                <p>Dive into ML and AI concepts with practical, real-world</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="card-header">
+                <span class="card-number">03</span>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20style%3D%22enable-background%3Anew%200%200%20100%20100%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%09.wdt-cus-icon-fill-color-01%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-02-01)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-icon-fill-color-2-01%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-02-02)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-02-01%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2210.9681%22%20y1%3D%2276.1345%22%20x2%3D%2265.0294%22%20y2%3D%2240.2097%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-icon-fill-color-01%22%20d%3D%22M99%2C51.8c0%2C13.8-22%2C24.9-49%2C24.9S1%2C65.6%2C1%2C51.8C1%2C38%2C23%2C26.9%2C50%2C26.9S99%2C38%2C99%2C51.8z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-02-02%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2213.8216%22%20y1%3D%2258.513%22%20x2%3D%2258.495%22%20y2%3D%2249.4921%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-icon-fill-color-2-01%22%20d%3D%22M46.1%2C99c16.2%2C0%2C29.3-21.9%2C29.3-49S62.2%2C1%2C46.1%2C1C29.9%2C1%2C16.8%2C22.9%2C16.8%2C50S29.9%2C99%2C46.1%2C99z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" class="rotating-svg" alt="icon">
+            </div>
+            <div class="card-content">
+                <h3>ARTIFICIAL INTELLIGENCE</h3>
+                <p>Solve complex challenges using advanced ML techniques and neural</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="card-header">
+                <span class="card-number">04</span>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20style%3D%22enable-background%3Anew%200%200%20100%20100%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%09.wdt-cus-text-fill-color-03-01%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-01)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-02%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-02)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-03%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-03)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-04%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-04)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-05%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-05)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-06%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-06)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-07%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-07)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%09.wdt-cus-text-fill-color-03-08%7Bfill%3Anone%3Bstroke%3Aurl(%23wdt-cus-icon-fill-color-gradient-03-08)%3Bstroke-width%3A0.9248%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-01%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%22-0.4643%22%20y1%3D%2269.0757%22%20x2%3D%2269.5058%22%20y2%3D%2245.4249%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-01%22%20d%3D%22M50.1%2C99c27.1%2C0%2C49-21.9%2C49-49c0-27.1-21.9-49-49-49C23%2C1%2C1.1%2C22.9%2C1.1%2C50C1.1%2C77.1%2C23%2C99%2C50.1%2C99z%20%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-02%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2247.391%22%20y1%3D%22102.4476%22%20x2%3D%2251.2245%22%20y2%3D%2290.8983%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-02%22%20d%3D%22M74.8%2C7.9c0%2C1.6-11%2C2.8-24.6%2C2.8c-13.6%2C0-24.6-1.3-24.6-2.8c0-1.6%2C11-2.8%2C24.6-2.8%20C63.7%2C5%2C74.8%2C6.3%2C74.8%2C7.9z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-03%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2247.2917%22%20y1%3D%2218.3307%22%20x2%3D%2251.1173%22%20y2%3D%226.792%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-03%22%20d%3D%22M74.7%2C92c0%2C1.6-11%2C2.8-24.6%2C2.8c-13.6%2C0-24.6-1.3-24.6-2.8c0-1.6%2C11-2.8%2C24.6-2.8%20C63.6%2C89.2%2C74.7%2C90.5%2C74.7%2C92z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-04%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2244.9128%22%20y1%3D%2297.418%22%20x2%3D%2251.7397%22%20y2%3D%2278.5817%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-04%22%20d%3D%22M12.6%2C18.2c0-2.5%2C16.7-4.6%2C37.2-4.6c20.6%2C0%2C37.2%2C2%2C37.2%2C4.6s-16.7%2C4.6-37.2%2C4.6%20C29.4%2C22.7%2C12.6%2C20.7%2C12.6%2C18.2z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-05%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2244.9514%22%20y1%3D%2236.4471%22%20x2%3D%2251.5746%22%20y2%3D%2217.444%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-05%22%20d%3D%22M11%2C79.3c0-2.5%2C17.3-4.6%2C38.7-4.6c21.4%2C0.1%2C38.7%2C2.1%2C38.7%2C4.6c0%2C2.5-17.3%2C4.6-38.7%2C4.6%20C28.4%2C83.8%2C11%2C81.8%2C11%2C79.3z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-06%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2242.5481%22%20y1%3D%2288.9087%22%20x2%3D%2252.5008%22%20y2%3D%2264.0834%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-06%22%20d%3D%22M49.7%2C37.2c25.1%2C0%2C45.4-2.8%2C45.4-6.2c0-3.4-20.3-6.2-45.4-6.2c-25.1%2C0-45.4%2C2.8-45.4%2C6.2%20C4.3%2C34.4%2C24.7%2C37.2%2C49.7%2C37.2z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-07%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2243.3015%22%20y1%3D%2254.4022%22%20x2%3D%2252.506%22%20y2%3D%2230.0678%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-07%22%20d%3D%22M3.5%2C65.2c0-3.3%2C20.8-5.9%2C46.5-5.9s46.5%2C2.7%2C46.5%2C5.9c0%2C3.3-20.8%2C5.9-46.5%2C5.9S3.5%2C68.6%2C3.5%2C65.2%20z%22%3E%3C%2Fpath%3E%3ClinearGradient%20id%3D%22wdt-cus-icon-fill-color-gradient-03-08%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2238.2701%22%20y1%3D%2277.1089%22%20x2%3D%2254.1484%22%20y2%3D%2245.8574%22%20gradientTransform%3D%22matrix(1%200%200%20-1%200%20102)%22%3E%09%3Cstop%20offset%3D%220%22%20style%3D%22stop-color%3Avar(--wdtPrimaryColor)%22%3E%3C%2Fstop%3E%09%3Cstop%20offset%3D%221%22%20style%3D%22stop-color%3Avar(--wdtTertiaryColor)%22%3E%3C%2Fstop%3E%3C%2FlinearGradient%3E%3Cpath%20class%3D%22wdt-cus-text-fill-color-03-08%22%20d%3D%22M98.5%2C47.5c0%2C4.7-21.8%2C8.4-48.8%2C8.4c-26.9%2C0-48.8-3.7-48.8-8.4c0-4.7%2C21.8-8.4%2C48.8-8.4%20C76.7%2C39.1%2C98.5%2C42.8%2C98.5%2C47.5z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" class="rotating-svg" alt="icon">
+            </div>
+            <div class="card-content">
+                <h3>APPLIED DEEP LEARNING</h3>
+                <p>Leverage cutting-edge algorithms to tackle intricate problems with</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <footer class="oppty-final-footer">
+        <div class="f-content-wrapper">
+            <div class="f-main-grid">
+                <div class="f-item brand-area">
+                    <img src="./images/footer oppty.png" alt="OppTy" class="f-logo-img">
+                    <p class="f-desc">Power up your success with innovative IT, BPO, E-commerce, Web Development, and AI solutions tailored to your vision.</p>
+                    <p class="f-copy-desktop">© 2026 Oppty. All Rights Reserved.</p>
+                </div>
+
+                <div class="f-item">
+                    <h4 class="f-title">HYDERABAD LOCATIONS</h4>
+                    <p class="f-info">108/43, Vijaya Lakshmi Enclave, 1st Floor, PJR Enclave Rd, Gangaram, ICRISAT Colony, Hyderabad, Telangana 500050</p>
+                </div>
+
+                <div class="f-item">
+                    <h4 class="f-title">CONTACT US</h4>
+                    <a href="mailto:info@oppty.in" class="f-mail">info@oppty.in</a>
+                    <p class="f-phone">+91-9491209900</p>
+                </div>
+
+                <div class="f-item">
+                    <h4 class="f-title">QUICK LINKS</h4>
+                    <ul class="f-links-list">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./About us .html">About Us</a></li>
+                        <li><a href="./Our services.html">Services</a></li>
+                        <li><a href="./careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://wa.me/919491209900" class="f-whatsapp-btn" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./academy.js"></script>
+</body>
+</html>

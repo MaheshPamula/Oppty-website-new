@@ -1,0 +1,460 @@
+/* Active state for navigation */
+.nav-links a.active {
+    color: var(--indigo) !important;
+}
+
+.nav-links a.active::after {
+    width: 100% !important;
+}
+
+
+
+
+
+
+/* --- Contrast Fix Section --- */
+
+.oppty-about-section {
+    padding: 80px 20px;
+    /* This background ensures visibility on a white website */
+    background-color: #0f172a; 
+    border-radius: 40px; /* Optional: adds a rounded look if placed inside a white page */
+    margin: 20px;        /* Optional: adds space around the section */
+}
+
+.oppty-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Heading - Now visible on the dark background */
+.oppty-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #f8fafc; /* Off-white for high contrast */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.oppty-title .highlight {
+    color: #3b82f6; /* Bright blue for emphasis */
+}
+
+/* Video Frame - Reduced & Sharp */
+.oppty-video-frame {
+    width: 100%;
+    max-width: 600px; /* Even more compact */
+    height: 340px;
+    margin: 0 auto 50px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.oppty-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cards - Styled for Dark Background */
+.oppty-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.oppty-card {
+    background: rgba(30, 41, 59, 0.5); /* Subtle dark slate */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.oppty-card:hover {
+    border-color: #3b82f6;
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.oppty-card p {
+    color: #cbd5e1; /* Light grey text for readability */
+    line-height: 1.6;
+}
+
+.oppty-card strong {
+    color: #ffffff;
+}
+
+.accent-bar {
+    width: 35px;
+    height: 3px;
+    background: #3b82f6;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Section Setup */
+.oppty-3d-section {
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2f5 100%);
+    padding: 80px 20px;
+    perspective: 1000px; /* Essential for 3D */
+    overflow: hidden;
+}
+
+.oppty-3d-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 60px;
+}
+
+.oppty-3d-title span { color: #3b82f6; }
+
+/* 3D Grid */
+.oppty-3d-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card Wrap for perspective */
+.card-3d-wrap {
+    perspective: 1000px;
+}
+
+.card-3d {
+    position: relative;
+    height: 320px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 3D Content Pop-out */
+.card-content {
+    transform: translateZ(50px); /* Makes text float above card */
+}
+
+/* Card Colors based on image */
+.bg-blue   { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+.bg-green  { background: linear-gradient(135deg, #064e3b, #10b981); }
+.bg-orange { background: linear-gradient(135deg, #7c2d12, #f97316); }
+.bg-slate  { background: linear-gradient(135deg, #334155, #94a3b8); }
+
+/* Sparkle Animation */
+.sparkles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    mask-image: linear-gradient(to bottom, white, transparent);
+    animation: sparkleMove 10s linear infinite;
+}
+
+@keyframes sparkleMove {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
+
+.card-3d h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+.card-3d p { font-size: 0.9rem; line-height: 1.5; opacity: 0.9; }
+
+
+
+
+
+
+
+
+
+/* Deep Blue Tech Background */
+.oppty-excellence-section {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    padding: 100px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+.excellence-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Left Content */
+.eyebrow {
+    color: #3b82f6;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.excellence-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.excellence-title .highlight {
+    color: #3b82f6;
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.excellence-p {
+    color: #94a3b8; /* Soft blue-grey for readability */
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Award Cards - Blue Glass Style */
+.awards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.award-item:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    transform: translateX(15px);
+}
+
+/* Sparking / Shimmering Numbers */
+.award-id {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    margin-right: 30px;
+    position: relative;
+    transition: color 0.4s;
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #1e293b, #3b82f6, #ffffff, #3b82f6, #1e293b);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+.award-body h4 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.award-body p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Reveal Animation States */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+.ceo-vision-white {
+    background-color: #ffffff; /* Pure white background */
+    padding: 100px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.vision-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.vision-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.vision-badge {
+    background: #eff6ff;
+    color: #3b82f6;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.vision-header h1 {
+    font-size: 3rem;
+    color: #0f172a;
+    margin-top: 15px;
+}
+
+.accent-text { color: #3b82f6; }
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.vision-card {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    padding: 40px;
+    border-radius: 24px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.vision-card:hover {
+    transform: translateY(-15px);
+    border-color: #3b82f6;
+    box-shadow: 0 30px 60px rgba(59, 130, 246, 0.12);
+}
+
+.vision-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.vision-card:hover .vision-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Animation Setup */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* Partners Section - Light Blue Background */
+.partners-section {
+    background: #f0f7ff;
+    padding: 80px 20px;
+    text-align: center;
+}
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+.partner-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+.partner-card img {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #3b82f6;
+}
+.partner-card:hover { transform: translateY(-10px); }
+
+/* Review Section - Dark Tech Background */
+.review-section {
+    background: #0f172a;
+    padding: 100px 0;
+    overflow: hidden;
+    color: white;
+}
+.review-header { text-align: center; margin-bottom: 50px; }
+.rating-stars { color: #fbbf24; font-size: 1.5rem; }
+
+/* The Infinite Slider Animation */
+.slider-container { width: 100%; overflow: hidden; }
+.slider-track {
+    display: flex;
+    width: calc(350px * 8);
+    animation: scroll 20s linear infinite;
+}
+.review-slide {
+    width: 350px;
+    background: rgba(255,255,255,0.05);
+    margin: 0 15px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 3)); }
+}
+.stars { color: #fbbf24; margin-bottom: 10px; }
+.review-slide h5 { margin-top: 20px; font-size: 1.1rem; color: #3b82f6; }
+
+
+
+
+
+
+
+
+.tel-link {
+    text-decoration: none; 
+    color: inherit;     
+    display: flex;         
+    align-items: center;
+    gap: 8px;              
+}

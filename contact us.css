@@ -1,0 +1,483 @@
+:root {
+    --navy: #0F172A;
+    --indigo: #6366F1;
+    --emerald: #10B981;
+    --ghost-white: #F8FAFC;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--ghost-white);
+    padding-top: 100px; /* Space for fixed navbar */
+}
+
+/* Navbar Container */
+.navbar {
+    height: 90px;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    height: 55px; /* Adjust based on your logo aspect ratio */
+    display: block;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition);
+}
+
+.nav-links a i {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+/* Sliding Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--indigo);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--indigo);
+}
+
+/* Simplified Dropdown */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background: var(--white);
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    border-top: 3px solid var(--indigo);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    text-transform: none;
+}
+
+.dropdown-menu a::after { display: none; }
+
+/* Actions & Buttons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-solid {
+    background: var(--emerald);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 2px solid var(--emerald);
+    color: var(--emerald);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.phone-link {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phone-link i { color: var(--indigo); }
+
+/* Scroll State */
+.navbar.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.1);
+}
+
+
+
+
+
+
+
+.contact-semiconductor-hub {
+    background-color: #ffffff;
+    padding: 120px 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--navy);
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* ORBIT ANIMATION */
+.orbit-stage {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.core-nucleus {
+    text-align: center;
+    z-index: 10;
+    background: #0D0D12
+    padding: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(26, 26, 46, 0.05);
+}
+
+.core-nucleus h2 { font-size: 2.5rem; font-weight: 300; }
+.navy-bold { font-weight: 900; display: block; }
+
+.electron-orbit {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(26, 26, 46, 0.1);
+    border-radius: 50%;
+    list-style: none;
+    animation: rotateOrbit 20s linear infinite;
+}
+
+.electron {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    /* Counter-rotate text so it stays upright */
+    animation: counterRotate 20s linear infinite;
+}
+
+/* Positioning Electrons around the circle */
+.electron:nth-child(1) { top: -30px; left: 50%; margin-left: -30px; }
+.electron:nth-child(2) { right: -30px; top: 50%; margin-top: -30px; }
+.electron:nth-child(3) { bottom: -30px; left: 50%; margin-left: -30px; }
+.electron:nth-child(4) { left: -30px; top: 50%; margin-top: -30px; }
+.electron:nth-child(5) { top: 15%; right: 15%; }
+
+@keyframes rotateOrbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes counterRotate { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+
+/* Content Reveal Styling */
+.contact-matter-reveal { text-align: center; margin-bottom: 100px; }
+.text-block p { max-width: 800px; margin: 20px auto; line-height: 1.8; color: #555; font-size: 1.1rem; }
+
+.address-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.address-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.address-card:hover { border-color: var(--navy); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+.address-card h4 { color: var(--navy); margin-bottom: 15px; font-size: 1rem; letter-spacing: 1px; }
+
+.contact-strip {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.2rem;
+    padding: 30px;
+    background: #0D0D12
+    border-radius: 15px;
+}
+
+/* BIG VIDEO SECTION */
+.full-video-section { margin-top: 50px; }
+.video-frame-large {
+    width: 100%;
+    height: 600px; /* Big height requirement */
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    /* box-shadow: 0 30px 60px rgba(0,0,0,0.1); */
+}
+
+.video-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fit cover requirement */
+}
+
+.navy-gradient-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(26, 26, 46, 0.4));
+}
+
+
+
+
+
+:root {
+    --navbar-navy: #1a1a2e;
+    --ice-slate: #f1f4f9; /* Professional, soft grey-blue */
+    --pure-white: #ffffff;
+    --navy-glow: rgba(26, 26, 46, 0.08);
+}
+
+/* 1. Global Section Refresh */
+.contact-semiconductor-hub, 
+.solutions-hub, 
+.tech-hub {
+    background-color: var(--ice-slate); /* The new background */
+    padding: 120px 0;
+    transition: background 0.5s ease;
+}
+
+/* 2. Floating Card Logic */
+/* This makes cards look like they are sitting on top of the slate background */
+.poly-card, .tech-card, .info-card, .address-card, .glass-form {
+    background: #0F172A
+    border: none !important;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px var(--navy-glow); /* Soft Navy shadow for depth */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.poly-card:hover, .address-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(26, 26, 46, 0.15); /* Stronger shadow on hover */
+}
+
+/* 3. Text Contrast Fix */
+.navy-title, .location-header, .core-nucleus h2 {
+    color: var(--navbar-navy);
+    font-weight: 900;
+}
+
+/* 4. The Semiconductor Orbit Visuals */
+/* On a slate background, the orbit circle should be slightly darker */
+.electron-orbit {
+    border: 2px dashed rgba(26, 26, 46, 0.15); /* Dashed line looks more like a circuit */
+}
+
+/* 5. Video Section Frame */
+/* Framing the video in white makes it look like a high-end monitor */
+.video-frame-large, .video-frame {
+    background: var(--pure-white);
+    padding: 15px; /* The "Frame" effect */
+    border-radius: 40px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+}
+
+
+
+:root {
+    --deep-navy: #1a1a2e;
+    --gold-accent: #EDB76C;
+    --card-bg: #1f2937;
+    --text-white: #f3f4f6;
+}
+
+.premium-pricing-suite {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 120px 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-white);
+    overflow: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header & Toggle */
+.pricing-header-reveal { text-align: center; margin-bottom: 80px; }
+.gold-text { color: var(--gold-accent); }
+.main-heading { font-size: 3rem; font-weight: 900; margin: 15px 0; letter-spacing: -1px; }
+
+.toggle-container { display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 30px; }
+.discount-pill { background: var(--gold-accent); color: var(--deep-navy); padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+/* Toggle Switch Styling */
+.switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: .4s; border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background: var(--gold-accent); transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--deep-navy); border: 1px solid var(--gold-accent); }
+input:checked + .slider:before { transform: translateX(26px); }
+
+/* Pricing Cards */
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 100px; }
+
+.pricing-card {
+    background: var(--card-bg);
+    padding: 60px 40px;
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+    transition: 0.5s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* HOVER COLOR REQUIREMENT: #EDB76C */
+.pricing-card:hover {
+    border-color: var(--gold-accent);
+    box-shadow: 0 20px 40px rgba(237, 183, 108, 0.15);
+}
+
+.regular-highlight {
+    background: linear-gradient(180deg, var(--gold-accent) 0%, #d4a055 100%);
+    color: var(--deep-navy);
+}
+
+.regular-highlight h3, .regular-highlight .feat-list li { color: var(--deep-navy); }
+
+/* Blinking/Pulse Animation */
+.pulse-ring {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 15px; height: 15px;
+    background: var(--gold-accent);
+    border-radius: 50%;
+}
+.pulse-ring::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    border: 2px solid var(--gold-accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+.pricing-btn {
+    width: 100%; padding: 15px; margin-top: 30px;
+    background: #333; color: white; border: none;
+    border-radius: 50px; font-weight: bold; cursor: pointer;
+    transition: 0.3s;
+}
+
+.gold-btn { background: var(--deep-navy); }
+.pricing-card:hover .pricing-btn:not(.gold-btn) { background: var(--gold-accent); color: var(--deep-navy); }
+
+/* Value Footer Section */
+.oppty-value-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.value-item h4 { color: var(--gold-accent); margin-bottom: 10px; font-size: 1.2rem; }
+.value-item p { font-size: 0.9rem; opacity: 0.8; line-height: 1.6; }
+
+.blink-dot {
+    width: 8px; height: 8px; background: var(--gold-accent);
+    border-radius: 50%; margin-bottom: 15px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink { from { opacity: 0.2; } to { opacity: 1; } }
+
+
+
+
+.tel-link {
+    text-decoration: none; 
+    color: inherit;     
+    display: flex;         
+    align-items: center;
+    gap: 8px;              
+}
